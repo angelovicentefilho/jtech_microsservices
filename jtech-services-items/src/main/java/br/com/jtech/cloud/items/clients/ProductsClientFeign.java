@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import br.com.jtech.cloud.items.protocol.ProductResponse;
 
-//@FeignClient(name = "service-products")
-@FeignClient(name = "service-products", url = "http://localhost:8082")
+@FeignClient(name = "service-products")
 public interface ProductsClientFeign {
 
 	@GetMapping("/products")

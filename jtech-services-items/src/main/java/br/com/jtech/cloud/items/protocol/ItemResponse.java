@@ -6,12 +6,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
+@AllArgsConstructor
 @Data
 @Builder
 public class ItemResponse {
 
 	private ProductResponse product;
 	private Integer quantity;
+	private Integer port;
 
 	public double getTotal() {
 		return getProduct().getPrice() * getQuantity().doubleValue();

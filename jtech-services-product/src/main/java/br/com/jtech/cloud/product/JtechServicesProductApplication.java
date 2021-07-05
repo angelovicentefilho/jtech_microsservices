@@ -7,10 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 import br.com.jtech.cloud.product.entities.Product;
 import br.com.jtech.cloud.product.repository.ProductRepository;
 
+@EnableEurekaClient
 @SpringBootApplication
 public class JtechServicesProductApplication implements CommandLineRunner {
 
