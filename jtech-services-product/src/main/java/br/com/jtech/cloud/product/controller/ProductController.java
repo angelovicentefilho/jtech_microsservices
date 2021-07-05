@@ -22,13 +22,13 @@ public class ProductController {
 		this.productService = productService;
 	}
 	
-	@GetMapping("/products")
+	@GetMapping
 	public List<Product> products() {
 		return this.productService.findAll();
 	}
 	
 	
-	@GetMapping("/products/{id}")
+	@GetMapping("/{id}")
 	public Product getById(@PathVariable Long id) {
 		return this.productService.findById(id);
 	}

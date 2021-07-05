@@ -11,9 +11,9 @@ import br.com.jtech.cloud.items.protocol.ProductResponse;
 @FeignClient(name = "service-products")
 public interface ProductsClientFeign {
 
-	@GetMapping("/products")
+	@GetMapping
 	public List<ProductResponse> products();
 
-	@GetMapping("/products/{id}")
+	@GetMapping("/{id}")
 	public ProductResponse getById(@PathVariable Long id);
 }
